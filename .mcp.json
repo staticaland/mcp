@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "bro": {
+      "command": "go",
+      "args": ["run", "."]
+    }
+  }
+}
