@@ -13,6 +13,9 @@ This project builds an MCP (Model Context Protocol) server using MCP-Go.
 
 ## Development Workflow
 
+### Commit Rule
+**Always split large changes into small, atomic commits.** Each commit should be the smallest meaningful unit of change that makes sense on its own. If you're tempted to use "and" in your commit message, it should probably be multiple commits.
+
 ### Build & Release
 - GoReleaser handles cross-platform builds via GitHub Actions
 - Release Please automatically manages versioning and changelog generation
