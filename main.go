@@ -35,11 +35,8 @@ func main() {
 }
 
 func handleHello(ctx context.Context, req mcp.CallToolRequest) (*mcp.CallToolResult, error) {
-	name, err := req.GetString("name")
-	if err != nil || name == "" {
-		name = "World"
-	}
-
+	name := req.GetString("name", "World")
+	
 	message := fmt.Sprintf("Hello, %s!", name)
 	return mcp.NewToolResultText(message), nil
 }
