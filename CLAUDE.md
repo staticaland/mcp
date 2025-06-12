@@ -14,15 +14,19 @@ This project builds an MCP (Model Context Protocol) server using MCP-Go.
 ## Development Workflow
 
 ### Build & Release
+
 - GoReleaser handles cross-platform builds via GitHub Actions
 - Release Please automatically manages versioning and changelog generation
 - Homebrew formula is automatically generated and updated
 
 ### Common Commands
+
 Use `just` to run common development tasks:
+
 - Check `justfile` for available commands
 
 ## Resources
+
 - [MCP-Go Documentation](https://mcp-go.dev/servers)
 - [MCP-Go GitHub](https://github.com/mark3labs/mcp-go)
 - [GoReleaser Documentation](https://goreleaser.com/)
@@ -32,14 +36,17 @@ Use `just` to run common development tasks:
 ## Commit Standards
 
 ### Atomic Commits
+
 All code changes MUST be broken down into small, atomic commits. Each commit MUST represent one logical change that makes sense on its own. If your commit message contains "and", it SHOULD be split into multiple commits.
 
 ### Conventional Commits
+
 All commit messages MUST follow the Conventional Commits format: `type: description`
 
 Required commit types:
+
 - `feat:` - New features
-- `fix:` - Bug fixes  
+- `fix:` - Bug fixes
 - `docs:` - Documentation changes
 - `style:` - Code formatting
 - `refactor:` - Code restructuring
@@ -49,4 +56,13 @@ Required commit types:
 ## Documentation Standards
 
 ### Code Formatting
+
 In Markdown documentation, all code-related items MUST be wrapped in backticks. This includes variable names, function names, file names, folder paths, configuration keys, command line tools, and API endpoints.
+
+### Markdown Formatting
+
+After making changes to markdown files, MUST run `prettier` to ensure consistent formatting:
+
+```bash
+prettier --parser markdown --write <file>
+```
