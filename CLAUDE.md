@@ -29,16 +29,50 @@ Use `just` to run common development tasks:
 - [Release Please Documentation](https://github.com/google-github-actions/release-please-action)
 - [Just Documentation](https://github.com/casey/just)
 
-## Rules
+## Commit Structure Requirements
 
-### Commit
+### Atomic Commit Composition
 
-Always split large changes into small, atomic commits. Each commit should be the smallest meaningful unit of change that makes sense on its own. If you're tempted to use "and" in your commit message, it should probably be multiple commits.
+**REQ-001**: Developers MUST decompose all changes into atomic commits where each commit represents the smallest meaningful unit of change that maintains system integrity.
 
-### Conventional commits
+**REQ-002**: Each commit MUST be self-contained such that the codebase remains in a functional state after applying the commit in isolation.
 
-Follow the [Conventional Commits specification](https://www.conventionalcommits.org) for commits.
+**REQ-003**: Developers MUST NOT combine logically distinct changes within a single commit, regardless of their perceived relationship or temporal proximity.
 
-### Code in Markdown text
+**REQ-004**: When a proposed commit message contains conjunctions (specifically "and", "or", "also", "plus"), the developer MUST evaluate whether the commit violates atomicity requirements and decompose accordingly.
 
-In regular Markdown text, put most code-related things in code font using backticks (in Markdown).
+### Commit Message Standards
+
+**REQ-005**: All commit messages MUST conform to the Conventional Commits specification version 1.0.0 as published at https://www.conventionalcommits.org/.
+
+**REQ-006**: Commit messages MUST follow the structure: `<type>[optional scope]: <description>` where:
+- `type` is drawn from the approved type vocabulary
+- `scope` is optional and project-specific
+- `description` is a concise summary in imperative mood
+
+**REQ-007**: Commit types MUST be selected from the following approved vocabulary:
+- `feat`: new feature for the user
+- `fix`: bug fix for the user
+- `docs`: changes to documentation
+- `style`: formatting changes that do not affect code meaning
+- `refactor`: code change that neither fixes a bug nor adds a feature
+- `test`: adding missing tests or correcting existing tests
+- `chore`: changes to build process or auxiliary tools
+
+## Documentation Formatting Requirements
+
+### Code Reference Markup
+
+**REQ-008**: Within Markdown documentation, all code-related elements MUST be enclosed in backticks (`) to apply monospace formatting.
+
+**REQ-009**: Code-related elements subject to markup requirements include but are not limited to:
+- Variable names
+- Function names
+- Class names
+- File names and paths
+- Configuration keys
+- Command line arguments
+- API endpoints
+- Database table and column names
+
+**REQ-010**: Developers SHOULD use triple backticks (```) with language specification for multi-line code blocks to enable syntax highlighting.
