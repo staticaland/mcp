@@ -61,7 +61,7 @@ In Markdown documentation, all code-related items MUST be wrapped in backticks. 
 
 ### Markdown Formatting
 
-After making changes to markdown files, MUST run `prettier` to ensure consistent formatting:
+After making changes to markdown files, MUST run `prettier` for consistent formatting:
 
 ```bash
 prettier --parser markdown --write <file>
