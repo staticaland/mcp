@@ -1,25 +1,25 @@
-# MCP Server Project
+# MCP server project
 
-This project builds an MCP (Model Context Protocol) server using MCP-Go.
+Builds an MCP (Model Context Protocol) server using MCP-Go.
 
-## Tech Stack
+## Tech stack
 
-- **MCP Framework**: [MCP-Go](https://mcp-go.dev/servers) - Go implementation of MCP server
+- **MCP framework**: [MCP-Go](https://mcp-go.dev/servers) - Go implementation of MCP server
 - **Repository**: https://github.com/mark3labs/mcp-go
-- **Build Tool**: [GoReleaser](https://goreleaser.com/) with GitHub Actions
+- **Build tool**: [GoReleaser](https://goreleaser.com/) with GitHub Actions
 - **Versioning**: [Release Please](https://github.com/googleapis/release-please-action) with googleapis/release-please-action
-- **Package Management**: GoReleaser config includes Homebrew formula generation
-- **Task Runner**: [Just](https://github.com/casey/just) for common commands
+- **Package management**: GoReleaser config includes Homebrew formula generation
+- **Task runner**: [Just](https://github.com/casey/just) for common commands
 
-## Development Workflow
+## Development workflow
 
-### Build & Release
+### Build & release
 
 - GoReleaser handles cross-platform builds via GitHub Actions
 - Release Please automatically manages versioning and changelog generation
 - Homebrew formula is automatically generated and updated
 
-### Common Commands
+### Common commands
 
 Use `just` to run common development tasks:
 
@@ -27,21 +27,21 @@ Use `just` to run common development tasks:
 
 ## Resources
 
-- [MCP-Go Documentation](https://mcp-go.dev/servers)
+- [MCP-Go documentation](https://mcp-go.dev/servers)
 - [MCP-Go GitHub](https://github.com/mark3labs/mcp-go)
-- [GoReleaser Documentation](https://goreleaser.com/)
-- [Release Please Documentation](https://github.com/google-github-actions/release-please-action)
-- [Just Documentation](https://github.com/casey/just)
+- [GoReleaser documentation](https://goreleaser.com/)
+- [Release Please documentation](https://github.com/google-github-actions/release-please-action)
+- [Just documentation](https://github.com/casey/just)
 
-## Commit Standards
+## Commit standards
 
-### Atomic Commits
+### Atomic commits
 
-All code changes MUST be broken down into small, atomic commits. Each commit MUST represent one logical change that makes sense on its own. If your commit message contains "and", it SHOULD be split into multiple commits.
+Break all code changes into small, atomic commits. Each commit must represent one logical change that makes sense on its own. If your commit message contains "and", split it into multiple commits.
 
-### Conventional Commits
+### Conventional commits
 
-All commit messages MUST follow the Conventional Commits format: `type: description`
+All commit messages must follow the Conventional Commits format: `type: description`
 
 Required commit types:
 
@@ -53,15 +53,15 @@ Required commit types:
 - `test:` - Adding or updating tests
 - `chore:` - Build process, tool changes
 
-## Documentation Standards
+## Documentation standards
 
-### Code Formatting
+### Code formatting
 
-In Markdown documentation, all code-related items MUST be wrapped in backticks. This includes variable names, function names, file names, folder paths, configuration keys, command line tools, and API endpoints.
+In Markdown documentation, wrap all code-related items in backticks. This includes variable names, function names, file names, folder paths, configuration keys, command line tools, and API endpoints.
 
-### Markdown Formatting
+### Markdown formatting
 
-After making changes to markdown files, MUST run `prettier` for consistent formatting:
+After making changes to markdown files, run `prettier` for consistent formatting:
 
 ```bash
 prettier --parser markdown --write <file>

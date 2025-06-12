@@ -1,7 +1,7 @@
-# MCP Server
+# MCP server
 
-A simple MCP (Model Context Protocol) server implementation in Go.
+Simple MCP (Model Context Protocol) server in Go.
 
-Provides a `hello` tool that greets users with a customizable name parameter.
+Includes a `hello` tool that greets users with a custom name.
 
 Built with [MCP-Go](https://github.com/mark3labs/mcp-go).
